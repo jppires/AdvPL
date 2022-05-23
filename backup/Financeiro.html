@@ -1,0 +1,51 @@
+  <!DOCTYPE html> 
+<html> 
+  <head> 
+    <meta http-equiv=”Content-Type” content=”text/html; charset=utf-8″>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+	<link rel="stylesheet" href="style.css">  
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.11/jquery.mask.min.js"></script>
+    <script src="index.js"></script>   
+    <title> 
+      Controle Financeiro 
+    </title> 
+  </head> 
+  
+  <body id="body"> 
+    <h1 color="red"> 
+      Controle Financeiro
+    </h1> 
+	
+  
+    <div id="inputs">  
+        <!-- Making a text input -->
+       <input type="text" id="cCodobj" placeholder="Objeto"> 
+	   <button type="button" onclick="ShowObj()" class="btn btn-primary" data-toggle="modal" data-target="#ExemploModalCentralizado">
+			<img src="lupa.png">
+		</button><br>
+        <input type="text" id="Data" class="form-control" name="Data" placeholder="Data"> <br>
+        <input type="text" id="Valor" placeholder="Valor"> <br>
+        <input type="text" id="Desc" placeholder="Descrição"> <br>
+                  
+        <!-- Button to send data -->
+        <button onclick="sendJSON()">Cadastrar</button> 
+        <button onclick="erase()">Limpar</button>
+        <input type="text" id="mes" placeholder="Mes ref.">
+        <input type="text" id="ano" placeholder="Ano ref.">
+		<button onclick="getData()">Listar</button>
+<div class="divObj">
+
+</div>
+
+  
+      <!-- For printing result from server -->
+      <p class="result"></p> 
+      
+   </div> 
+  
+  </body> 
+</html> 
